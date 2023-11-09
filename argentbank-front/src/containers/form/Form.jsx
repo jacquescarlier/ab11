@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../redux/reducers/ApiUser";
 import { useNavigate } from "react-router-dom";
 
+import Button from "../../components/button/button"
+
 function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -56,16 +58,16 @@ console.log("rememberMe", rememberMe)
            />
         <label htmlFor="remember-me" className="labelCheckbox">Remember me</label>
       </div>
-      <button
-
-        className="sign-in-button"
-        onClick={(e) => {
-          e.preventDefault();
-          dispatch(userLogIn({ email: email, password: password }));
-        }}
-      >
-        Sign In
-      </button>
+      <Button
+      classButton = "sign-in-button"
+      title = "Sign In"
+      type="onClick"
+      Click = {(e) => {
+        e.preventDefault();
+        dispatch(userLogIn({ email: email, password: password }));
+      }}
+      />
+      
     </form>
   );
 }

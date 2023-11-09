@@ -1,4 +1,5 @@
 import "../../index.css";
+import Button from "../button/button"
 
 function AccountCard({ title, amount, description }) {
   return (
@@ -9,7 +10,12 @@ function AccountCard({ title, amount, description }) {
         <p className="account-amount-description">{description}</p>
       </div>
       <div className="account-content-wrapper cta">
-        <button className="transaction-button">View transactions</button>
+        <Button
+        classButton = "transaction-button"
+        type = "onClick"
+        title="View transactions"
+        click = ""
+        />
       </div>
     </section>
   );

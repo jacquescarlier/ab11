@@ -3,7 +3,7 @@ import argentBankLogo from "../../assets/img/argentBankLogo.png";
 import "./nav.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../redux/reducers/ApiUser"
+/*import { logout } from "../../redux/reducers/ApiUser"*/
 const Header=()=> {
 
   const dispatch = useDispatch()

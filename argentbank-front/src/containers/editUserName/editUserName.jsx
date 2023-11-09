@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { editUserName } from "../../redux/reducers/ApiUser";
+import Button from "../../components/button/button"
 import "./editUserName.css"
 import "../../index.css"
 
@@ -83,26 +84,26 @@ export default function App() {
             </div>
           </div>
           <div className="userNameButton">
-            <button
-              className="editUserNameButton"
-              disabled={!userName}
-              onClick={(e) => {
-                e.preventDefault();
-                dispatch(editUserName({ userName: userName, token: token }));
-                cancelClick();
-              }}
-            >
-              Save
-            </button>
-            <button
-              className="editUserNameButton"
-              onClick={(e) => {
-                e.preventDefault();
-                cancelClick();
-              }}
-            >
-              Cancel
-            </button>
+         
+            <Button 
+            classButton = "editUserNameButton"
+            type= "onClick"
+            title="Save"
+            Click= {(e) => {
+              e.preventDefault();
+              dispatch(editUserName({ userName: userName, token: token }));
+              cancelClick();
+            }}
+            />
+             <Button 
+            classButton = "editUserNameButton"
+            type= "onClick"
+            title="Cancel"
+            Click= {(e) => {
+              e.preventDefault();
+              cancelClick();
+            }}
+            />
           </div>
         </form>
       </div>

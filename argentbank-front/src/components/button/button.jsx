@@ -5,7 +5,6 @@ const button = ({ title, classButton, type, Click }) => {
     return (
         <>
             <button
-                
                 className={classButton}
                 type={type}
                 onClick={Click}>
