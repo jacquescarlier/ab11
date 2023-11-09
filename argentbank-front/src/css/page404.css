@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page404 {
+    margin: 10vh auto 10vh;
+    background-image: url('../assets/img/bank-tree.jpeg');
+    background-position: 0 -75px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+}
+
+.page404Content h2 {
+    color: red;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+p {
+    color: #145A32;
+   /* color: red;*/
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.errorPage404 {
+    color: hsl(146, 37%, 44%);
+    font-size: 22px;
+    font-weight: 900;
+}

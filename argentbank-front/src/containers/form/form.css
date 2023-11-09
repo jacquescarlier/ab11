@@ -1,0 +1,73 @@
+.main {
+    flex: 1;
+}
+
+.bg-dark {
+    background-color: #12002b;
+    min-height: 80vh;
+    padding: 5px 0;
+  }
+  .sign-in-content {
+    box-sizing: border-box;
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    color: #2c3e50;
+  }
+ 
+  .sign-in-icon {
+    margin-left: 5px;
+    color: #2c3e50;
+  }
+  
+  .input-remember {
+    display: flex;
+    color: black;
+  }
+  
+  .input-remember label {
+    margin-left: 0.25rem;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .input-wrapper label {
+    font-weight: bold;
+  }
+  
+  .input-wrapper input {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+
+   .fa-user-circle  .sign-in-icon{
+    color: #2c3e50;
+   }
+  .fa {
+   display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+  }
+.labelCheckBox {
+  color: black;
+}
+  
+.sign-in-button {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
