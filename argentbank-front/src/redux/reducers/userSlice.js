@@ -8,6 +8,7 @@ const initialState = {
       firstName: "",
       lastName: "",
       userName: "",
+      userId: "",
     },
     status: "unsuccess",
     error: "",
@@ -26,6 +27,7 @@ const userLogInSlice = createSlice({
             firstName: action.payload.data.firstName,
             lastName: action.payload.data.lastName,
             userName: action.payload.data.userName,
+            userId: action.payload.data.id
           };
           state.status = "success";
           state.error = "";

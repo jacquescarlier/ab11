@@ -13,17 +13,16 @@ function Form() {
 
   const status = useSelector((state) => state.user.status);
   const error = useSelector((state) => state.user.error);
+  const userId = useSelector((state) => state.user.user.userId);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   if (status === "success") {
-    navigate("/useraccount");
+    navigate(`/useraccount/${userId}`);
   }
-  if(rememberMe === true) {
 
-  }
-console.log("rememberMe", rememberMe)
+
   return (
     <form id="logIn">
       <div className="input-wrapper">
@@ -55,19 +54,19 @@ console.log("rememberMe", rememberMe)
           id="remember-me"
           checked={rememberMe}
           onChange={(e) => setRememberMe(!rememberMe)}
-           />
+        />
         <label htmlFor="remember-me" className="labelCheckbox">Remember me</label>
       </div>
       <Button
-      classButton = "sign-in-button"
-      title = "Sign In"
-      type="onClick"
-      Click = {(e) => {
-        e.preventDefault();
-        dispatch(userLogIn({ email: email, password: password }));
-      }}
+        classButton="sign-in-button"
+        title="Sign In"
+        type="onClick"
+        Click={(e) => {
+          e.preventDefault();
+          dispatch(userLogIn({ email: email, password: password }));
+        }}
       />
-      
+
     </form>
   );
 }
