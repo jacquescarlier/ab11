@@ -76,6 +76,7 @@ async function getUserInfos(token) {
   return response;
 }
 
+
 // Logout 
 export const logout = () => {
   localStorage.removeItem("token")
