@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./form.css";
 import { useDispatch, useSelector } from "react-redux";
-import { userLogIn } from "../../redux/reducers/ApiUser";
+import { userLogIn } from "../../redux/ApiUser";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/button/button"
