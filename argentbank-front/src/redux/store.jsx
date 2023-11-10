@@ -1,7 +1,7 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import {combineReducers} from "redux";
-import storage from 'redux-persist/lib/storage';
+import storage from 'redux-persist/lib/storage/session';
 import { persistReducer} from 'redux-persist';
 import thunk from 'redux-thunk';
  

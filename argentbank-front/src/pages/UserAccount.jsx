@@ -2,9 +2,6 @@ import "../css/userAccount.css";
 import Account from "../components/accountCard/Account";
 import UserHeader from "../containers/nav/Nav";
 import EditNameSection from "../containers/editUserName/editUserName";
-import { useNavigate } from "react-router-dom"
-import { useSelector } from 'react-redux';
-
 
 const AccountsData = [
   {
@@ -29,15 +26,7 @@ const AccountsData = [
 
 function User() {
  
-  const userId = useSelector(state => state.user.user.userId)
- 
-  const Navigate = useNavigate()
-
-
   return (
-    <div>
-      {!userId && (<Navigate to='Page404' replace={true} />)}
-      {userId && (
         <>
           <UserHeader />
           <div className="user_container">
@@ -57,8 +46,6 @@ function User() {
             </main>
           </div>
         </>
-      )}
-    </div>
   );
 }
 
