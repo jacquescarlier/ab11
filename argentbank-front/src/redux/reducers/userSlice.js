@@ -10,7 +10,7 @@ const initialState = {
       userName: "",
       userId: "",
     },
-    status: "unsuccess",
+    status: false,
     error: "",
   };
   
@@ -29,7 +29,7 @@ const userLogInSlice = createSlice({
             userName: action.payload.data.userName,
             userId: action.payload.data.id
           };
-          state.status = "success";
+          state.status = true;
           state.error = "";
         })
         .addCase(userLogIn.rejected, (state, action) => {
@@ -38,14 +38,14 @@ const userLogInSlice = createSlice({
         })
         .addCase("LOGOUT", (state) => {
           state.user = { token: "" };
-          state.status = "unsuccess";
+          state.status = false;
           state.error = "";
         })
         .addCase(editUserName.fulfilled, (state, action) => {
           let user = state.user;
           user.userName = action.payload.body.userName;
           state.user = user;
-          state.status = "success";
+          state.status = true;
         });
     },
   });

@@ -2,6 +2,8 @@ import "../css/userAccount.css";
 import Account from "../components/accountCard/Account";
 import UserHeader from "../containers/nav/Nav";
 import EditNameSection from "../containers/editUserName/editUserName";
+import { useSelector } from 'react-redux';
+import { Navigate } from "react-router-dom";
 
 const AccountsData = [
   {
@@ -21,31 +23,37 @@ const AccountsData = [
   },
 ];
 
-
-
-
 function User() {
- 
+  
+
+  const status = useSelector(state => state.user.status)
+  
+
   return (
-        <>
-          <UserHeader />
-          <div className="user_container">
-            <main className="main bg-dark">
-              <div className="header">
-                <EditNameSection />
-              </div>
-              <h2 className="sr-only">Accounts</h2>
-              {AccountsData.map((account) => (
-                <Account
-                  key={account.title}
-                  title={account.title}
-                  amount={account.amount}
-                  description={account.description}
-                />
-              ))}
-            </main>
-          </div>
-        </>
+    <>
+      {!status  && (<Navigate to='Page404' replace= {true} />)}
+      {status && (<>
+        <UserHeader />
+        <div className="user_container">
+          <main className="main bg-dark">
+            <div className="header">
+              <EditNameSection />
+            </div>
+            <h2 className="sr-only">Accounts</h2>
+            {AccountsData.map((account) => (
+              <Account
+                key={account.title}
+                title={account.title}
+                amount={account.amount}
+                description={account.description}
+              />
+            ))}
+          </main>
+        </div>
+      </>
+      )}
+
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./form.css";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../redux/ApiUser";
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 import Button from "../../components/button/button"
 
@@ -18,7 +18,7 @@ function Form() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  if (status === "success") {
+  if (status === true) {
     navigate(`/useraccount/${userId}`);
   }
 

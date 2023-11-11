@@ -31,14 +31,14 @@ const Nav = () => {
         />
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
-      {status === "unsuccess" &&
+      {!status &&
         <div>
           <Link to="/sign-in" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             Sign In
           </Link>
         </div>}
-      {status === "success" && (
+      {status && (
         <div className='navbar_loginSuccess'>
           <Link className="main-nav-item" to="/user" >
             <i className="fa fa-user-circle"></i>
