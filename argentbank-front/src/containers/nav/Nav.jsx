@@ -9,6 +9,7 @@ const Nav = () => {
 
   const dispatch = useDispatch()
   const userName = useSelector(state => state.user.user.userName)
+  const userId = useSelector(state =>state.user)
   const status = useSelector(state => state.user.status)
   const navigate = useNavigate()
 
@@ -33,14 +34,14 @@ const Nav = () => {
       </Link>
       {!status &&
         <div>
-          <Link to="/sign-in" className="main-nav-item">
+          <Link to="/login" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             Sign In
           </Link>
         </div>}
       {status && (
         <div>
-          <Link className="main-nav-item" to="/user" >
+          <Link className="main-nav-item" to="/profile/`${userId}`" >
             <i className="fa fa-user-circle"></i>
             <span className="userNameCircle">{userName}</span>
           </Link>

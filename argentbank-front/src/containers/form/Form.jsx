@@ -19,7 +19,7 @@ function Form() {
   const navigate = useNavigate();
 
   if (status === true) {
-    navigate(`/useraccount/${userId}`);
+    navigate(`/profile/${userId}`);
   }
 
 

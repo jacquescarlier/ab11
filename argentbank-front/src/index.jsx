@@ -24,10 +24,10 @@ root.render(
       <Router>
         <Routes>
           <Route path="" element={<Home />} exact />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/useraccount/:userId" element={<UserAccount />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/profile/:userId" element={<UserAccount />} />
           <Route path="*" element={<Page404 />} />
-          <Route path="/useraccount/*" element={<Page404 />} />
+          <Route path="/profile/*" element={<Page404 />} />
         </Routes>
         <Footer />
       </Router>
