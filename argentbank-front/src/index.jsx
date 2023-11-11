@@ -9,9 +9,8 @@ import UserAccount from "./pages/UserAccount";
 import Page404 from "./pages/Page404"
 import Footer from "./containers/footer/Footer";
 
-import store from "./redux/store";
+import store from "./app/store";
 import { Provider } from "react-redux";
-
 import { persistStore} from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 

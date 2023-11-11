@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { editUserName } from "../../redux/ApiUser";
+import { editUserName } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import "./editUserName.css"
 import "../../index.css"
