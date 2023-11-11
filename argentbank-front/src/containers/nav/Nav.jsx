@@ -39,7 +39,7 @@ const Nav = () => {
           </Link>
         </div>}
       {status && (
-        <div className='navbar_loginSuccess'>
+        <div>
           <Link className="main-nav-item" to="/user" >
             <i className="fa fa-user-circle"></i>
             <span className="userNameCircle">{userName}</span>
