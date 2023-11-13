@@ -130,7 +130,7 @@ paths:
         "422":
           description: Unprocessable Entity
         "500":
- description: Internal Server Error
+      description: Internal Server Error
   /accounts/{accountId}/transactions/{transactionId}:
     get:
       security:
@@ -162,67 +162,45 @@ paths:
         "422":
           description: Unprocessable Entity
         "500":
- description: Internal Server Error
+          description: Internal Server Error
     put:
       security:
         - Bearer: []
       tags:
         - User Module
       summary: Account Transactions API
+      description: API for updating transaction's details
+      parameters:
+        - in: body
+          name: body
+          description: Update user profile attributes
+          required: true
+          schema:
+            $ref: "#/definitions/UpdateTransactionDetails"
+        - in: path
+          name: accountId
+          description: User's account ID
+          type: integer
+          required: true
+        - in: path
+          name: transactionId
+          description: Transaction ID
+          type: integer
+          required: true
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: User profile retrieved successfully
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        "400":
+          description: Invalid Fields
+        "401":
+          description: Unauthorized
+        "422":
+          description: Unprocessable Entity
+        "500":
+          description: Internal Server Error
 
 
-securityDefinitions:
-  Bearer:
-    type: apiKey
-    name: Authorization
-    in: header
-definitions:
-  User:
-    properties:
-      email:
-        type: string
-        description: user email
-      password:
-        type: string
-        description: user password
-      firstName:
-        type: string
-        description: user first name
-      lastName:
-        type: string
-        description: user last name
-      userName:
-        type: string
-        description: user public name
-  Login:
-    properties:
-      email:
-        type: string
-        description: user email
-      password:
-        type: string
-        description: user password
-  ApiResponse:
-    type: object
-    properties:
-      status:
-        type: integer
-      message:
-        type: string
-      body:
-        type: object
-        properties:
-          id:
-            type: string
-          email:
-            type: string
-  LoginResponse:
-    type: object
-    properties:
-      token:
-        type: string
-  UserProfile:
-    type: object
-    properties:
-      userName:
-        type: string
