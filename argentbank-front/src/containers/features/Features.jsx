@@ -1,6 +1,5 @@
 import React from 'react'
 import "./features.css";
-
 import iconChat from "../../assets/img/icon-chat.webp"
 import iconMoney from "../../assets/img/icon-money.webp"
 import iconSecurity from "../../assets/img/icon-security.webp"
@@ -26,8 +25,6 @@ const featuresData =
       "altText" :"Security icon" 
   }
 ]
-
-
 
 function Features() {
   return (

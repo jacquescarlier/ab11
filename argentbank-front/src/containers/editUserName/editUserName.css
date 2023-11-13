@@ -1,4 +1,3 @@
-
 .buttons-form {
   display: flex;
   justify-content: center;
@@ -31,7 +30,7 @@ h2 {
 .userName_input {
   display: flex;
   flex-direction: row;
-  padding: 0.5em ;
+  padding: 0.5em;
 }
 #userName,
 #firstName,
@@ -51,7 +50,6 @@ h2 {
   font-size: 1rem;
   margin-right: 0.5em;
   line-height: 3em;
-  
 }
 .userNameButton {
   display: flex;
@@ -77,9 +75,9 @@ h2 {
 
 #firstName,
 #lastName {
-  color: #B0ADAD;
-  background-color:#DDDADA;
+  color: #b0adad;
+  background-color: #dddada;
 }
-#userName{
+#userName {
   color: #333;
 }

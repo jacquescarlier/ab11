@@ -7,7 +7,8 @@ const button = ({ title, classButton, type, Click }) => {
             <button
                 className={classButton}
                 type={type}
-                onClick={Click}>
+                onClick={Click}
+                >
                 {title}
             </button>
         </>

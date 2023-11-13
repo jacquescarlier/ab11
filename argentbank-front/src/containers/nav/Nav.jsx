@@ -4,12 +4,9 @@ import "./nav.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 
-
 const Nav = () => {
-
   const dispatch = useDispatch()
   const userName = useSelector(state => state.user.user.userName)
-  /* const userId = useSelector(state =>state.user)*/
   const status = useSelector(state => state.user.status)
   const navigate = useNavigate()
 
@@ -20,7 +17,6 @@ const Nav = () => {
     sessionStorage.removeItem("token")
     navigate('/')
   };
-
 
   return (
     <nav className="main-nav">

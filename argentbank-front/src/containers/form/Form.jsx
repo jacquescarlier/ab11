@@ -1,33 +1,26 @@
-import { useState, useEffect} from "react";
-import "./form.css";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../api/ApiUser";
-import {useNavigate } from "react-router-dom";
-
 import Button from "../../components/button/button"
+import "./form.css";
 
 function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const status = useSelector((state) => state.user.status);
   const error = useSelector((state) => state.user.error);
   const userId = useSelector((state) => state.user.user.userId);
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-/*
-  if (status === true) {
-    navigate(`/profile/${userId}`);*/
-    useEffect(() => {
-      if(status === true){
-        navigate(`/profile/${userId}`)
-      }
-    })
-
-  
-
+ 
+  useEffect(() => {
+    if (status === true) {
+      navigate(`/profile/${userId}`)
+    }
+  })
 
   return (
     <form id="logIn">
@@ -49,6 +42,7 @@ function Form() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+      // error message
       {status === "error" && (
         <div className="errorMessage" id="errorText">
           {error}
@@ -72,7 +66,6 @@ function Form() {
           dispatch(userLogIn({ email: email, password: password }));
         }}
       />
-
     </form>
   );
 }

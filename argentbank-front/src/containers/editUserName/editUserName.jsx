@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { editUserName } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import "./editUserName.css"
-import "../../index.css"
 
 export default function App() {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ export default function App() {
     setExclamationPoint("");
   };
 
-  const cancelClick = () => {
+  const changeUserStateClick = () => {
     setIsActive((current) => !current);
     setTitleText("Welcome back");
     setFirstName(userFirstName);
@@ -92,7 +91,7 @@ export default function App() {
             Click= {(e) => {
               e.preventDefault();
               dispatch(editUserName({ userName: userName, token: token }));
-              cancelClick();
+              changeUserStateClick();
             }}
             />
              <Button 
@@ -101,7 +100,7 @@ export default function App() {
             title="Cancel"
             Click= {(e) => {
               e.preventDefault();
-              cancelClick();
+              changeUserStateClick();
             }}
             />
           </div>
