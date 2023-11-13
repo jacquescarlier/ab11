@@ -20,5 +20,4 @@ function AccountCard({ title, amount, description }) {
     </section>
   );
 }
-
 export default AccountCard;

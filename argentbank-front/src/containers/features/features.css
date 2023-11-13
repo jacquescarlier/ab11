@@ -3,13 +3,14 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  
+  /*
   img {
     width: 100px;
     height: auto;
-  }
+  }*/
   .feature-icon {
     width: 100px;
+    height: auto;
     border: 10px solid #00bc77;
     border-radius: 50%;
     padding: 1rem;
