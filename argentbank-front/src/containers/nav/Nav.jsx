@@ -9,7 +9,7 @@ const Nav = () => {
 
   const dispatch = useDispatch()
   const userName = useSelector(state => state.user.user.userName)
-  const userId = useSelector(state =>state.user)
+  /* const userId = useSelector(state =>state.user)*/
   const status = useSelector(state => state.user.status)
   const navigate = useNavigate()
 
@@ -41,7 +41,7 @@ const Nav = () => {
         </div>}
       {status && (
         <div>
-          <Link className="main-nav-item" to="/profile/`${userId}`" >
+          <Link  to="/profile/`{userId}`"  className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             <span className="userNameCircle">{userName}</span>
           </Link>

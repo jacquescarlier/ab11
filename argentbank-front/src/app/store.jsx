@@ -5,10 +5,10 @@ import storage from 'redux-persist/lib/storage/session';
 import { persistReducer} from 'redux-persist';
 import thunk from 'redux-thunk';
  
-import userLogIn from "../feature/user.slice";
+import userReducer from "../feature/user.slice";
 
 const reducers = combineReducers({
-  user: userLogIn
+  user: userReducer
 })
 
 const persistConfig = {

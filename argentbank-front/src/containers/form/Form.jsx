@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import "./form.css";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../api/ApiUser";
@@ -17,10 +17,16 @@ function Form() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+/*
   if (status === true) {
-    navigate(`/profile/${userId}`);
-  }
+    navigate(`/profile/${userId}`);*/
+    useEffect(() => {
+      if(status === true){
+        navigate(`/profile/${userId}`)
+      }
+    })
+
+  
 
 
   return (
