@@ -24,14 +24,12 @@ const AccountsData = [
 ];
 
 function User() {
-  
 
   const status = useSelector(state => state.user.status)
-  
 
   return (
     <>
-      {!status  && (<Navigate to='Page404' replace= {true} />)}
+      {!status && (<Navigate to='Page404' replace={true} />)}
       {status && (<>
         <UserHeader />
         <div className="user_container">
