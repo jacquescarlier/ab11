@@ -7,12 +7,12 @@ import { useNavigate } from "react-router-dom";
 const Nav = () => {
   const dispatch = useDispatch()
   const userName = useSelector(state => state.user.user.userName)
-  const status = useSelector(state => state.user.status)
+  const token = useSelector(state => state.user.user.token)
   const navigate = useNavigate()
 
   const handleSignOut = (e) => {
     e.preventDefault()
-    dispatch({type: 'LOGOUT'});
+    dispatch({ type: 'LOGOUT' });
     localStorage.removeItem("token")
     sessionStorage.removeItem("token")
     navigate('/')
@@ -28,16 +28,16 @@ const Nav = () => {
         />
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
-      {!status &&
+      {!token  &&
         <div>
           <Link to="/login" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             Sign In
           </Link>
         </div>}
-      {status && (
+      {token && (
         <div>
-          <Link  to="/profile/`{userId}`"  className="main-nav-item">
+          <Link to="/profile/`{userId}`" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             <span className="userNameCircle">{userName}</span>
           </Link>

@@ -42,7 +42,6 @@ function Form() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      // error message
       {status === "error" && (
         <div className="errorMessage" id="errorText">
           {error}
