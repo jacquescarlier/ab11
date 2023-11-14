@@ -15,7 +15,7 @@ function Form() {
   const status = useSelector((state) => state.user.status);
   const error = useSelector((state) => state.user.error);
   const userId = useSelector((state) => state.user.user.userId);
- 
+
   useEffect(() => {
     if (status === true) {
       navigate(`/profile/${userId}`)

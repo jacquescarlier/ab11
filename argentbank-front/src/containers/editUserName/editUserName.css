@@ -4,7 +4,6 @@
   align-items: center;
   gap: 30px;
 }
-
 h2 {
   font-size: 1.5em;
 }
@@ -16,7 +15,6 @@ h2 {
   padding-top: 0.5em;
   margin-top: 0.5em;
 }
-
 .userName_form {
   display: flex;
   flex-direction: column;
@@ -68,11 +66,9 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s ease-in;
 }
-
 .editUserNameButton:hover {
   background-color: #008e55;
 }
-
 #firstName,
 #lastName {
   color: #b0adad;

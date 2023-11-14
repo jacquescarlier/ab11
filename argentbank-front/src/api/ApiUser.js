@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-
 // user login
 export const userLogIn = createAsyncThunk(
   "user/logIn",
@@ -75,9 +74,8 @@ async function getUserInfos(token) {
   return response;
 }
 
-
 // Logout 
-export const logout = () => {
+/*export const logout = () => {
   localStorage.removeItem("token")
   sessionStorage.removeItem("token")
-}
+}*/
