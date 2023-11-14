@@ -23,7 +23,7 @@ root.render(
         <Routes>
           <Route path="" element={<Home />} exact />
           <Route path="/login" element={<SignIn />} />
-          <Route path="/profile/:userId" element={<UserAccount />} />
+          <Route path="/accounts/:userId" element={<UserAccount />} />
           <Route path="*" element={<Page404 />} />
           <Route path="/profile/*" element={<Page404 />} />
         </Routes>

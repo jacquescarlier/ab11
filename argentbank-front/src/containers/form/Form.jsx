@@ -18,7 +18,7 @@ function Form() {
 
   useEffect(() => {
     if (status === true) {
-      navigate(`/profile/${userId}`)
+      navigate(`/accounts/${userId}`)
     }
   })
 
