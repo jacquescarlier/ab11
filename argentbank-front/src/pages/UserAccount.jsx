@@ -25,12 +25,12 @@ const AccountsData = [
 
 function User() {
 
-  const status = useSelector(state => state.user.status)
+  const token = useSelector(state => state.user.user.token)
 
   return (
     <>
-      {!status && (<Navigate to='Page404' replace={true} />)}
-      {status && (<>
+      {!token && (<Navigate to='Page404' replace={true} />)}
+      {token && (<>
         <UserHeader />
         <div className="user_container">
           <main className="main bg-dark">
