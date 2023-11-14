@@ -11,10 +11,10 @@ function AccountCard({ title, amount, description }) {
       </div>
       <div className="account-content-wrapper cta">
         <Button
-        classButton = "transaction-button"
-        type = "onClick"
-        title="View transactions"
-        click = ""
+          classButton="transaction-button"
+          type="onClick"
+          title="View transactions"
+          click=""
         />
       </div>
     </section>
