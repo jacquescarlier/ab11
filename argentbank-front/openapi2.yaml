@@ -130,8 +130,6 @@ paths:
           description: Invalid Fields
         "401":
           description: Unauthorized
-        "422":
-          description: Unprocessable Entity
         "500":
           description: Internal Server Error
   /accounts/{accountId}/transactions/{transactionId}:
@@ -162,8 +160,6 @@ paths:
           description: Invalid Fields
         "401":
           description: Unauthorized
-        "422":
-          description: Unprocessable Entity
         "500":
           description: Internal Server Error
     put:
@@ -201,8 +197,6 @@ paths:
           description: Invalid Fields
         "401":
           description: Unauthorized
-        "422":
-          description: Unprocessable Entity
         "500":
           description: Internal Server Error
 securityDefinitions:
