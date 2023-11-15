@@ -17,7 +17,7 @@ export default function App
   const [inputFirstName, setInputFirstName] = useState(firstName);
   const [inputLastName, setInputLastName] = useState(lastName);
 //function for edit button
-  const handleClick = () => {
+  const editButtonClick = () => {
     setIsActive((current) => !current);
     setTitleText("Edit user info");
     setInputFirstName("");
@@ -105,15 +105,15 @@ export default function App
           </div>
         </form>
       </div>
-      <button
-        className="editUserNameButton"
-        style={{
-          display: isActive ? "none" : "",
-        }}
-        onClick={handleClick}
-      >
-        Edit Name
-      </button>
+      <Button 
+            classButton = "editUserNameButton"
+            type= "onClick"
+            title="Edit Name"
+            styleButton= 
+              {{display: isActive ? "none" : "",}}
+            
+            Click= {editButtonClick}
+            />
     </div>
   );
 }
