@@ -2,48 +2,47 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { editUserName } from "../../api/ApiUser";
 import Button from "../../components/button/button"
-import "./editUserName.css"
+import "./formEditUserName.css"
 
-export default function App() {
+export default function App
+() {
   const dispatch = useDispatch();
-  const initialUserName = useSelector((state) => state.user.user.userName);
-  const userFirstName = useSelector((state) => state.user.user.firstName);
-  const userLastName = useSelector((state) => state.user.user.lastName);
-  const token = useSelector((state) => state.user.user.token);
 
+  const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
+//management of profile form inputs and the title
   const [isActive, setIsActive] = useState(false);
   const [titleText, setTitleText] = useState("Welcome back");
   const [exclamationPoint, setExclamationPoint] = useState("!");
-  const [userName, setUserName] = useState("");
-  const [firstName, setFirstName] = useState(userFirstName);
-  const [lastName, setLastName] = useState(userLastName);
-
+  const [inputUserName, setUserName] = useState("");
+  const [inputFirstName, setInputFirstName] = useState(firstName);
+  const [inputLastName, setInputLastName] = useState(lastName);
+//function foredit button
   const handleClick = () => {
     setIsActive((current) => !current);
     setTitleText("Edit user info");
-    setFirstName("");
-    setLastName("");
+    setInputFirstName("");
+    setInputLastName("");
     setExclamationPoint("");
   };
-
+  // function for save and cancel button
   const changeUserStateClick = () => {
     setIsActive((current) => !current);
     setTitleText("Welcome back");
-    setFirstName(userFirstName);
-    setLastName(userLastName);
+    setInputFirstName(firstName);
+    setInputLastName(lastName);
     setExclamationPoint("!");
   };
 
   useEffect(() => {
-    setUserName(initialUserName);
-  }, [initialUserName]);
+    setUserName(userName);
+  }, [userName]);
 
   return (
     <div className="userEdit">
       <h2 className="userEdit_title">
         {titleText}
         <br />
-        {firstName} {lastName} {exclamationPoint}
+        {inputFirstName} {inputLastName} {exclamationPoint}
       </h2>
       <div className="userName">
         <form
@@ -57,7 +56,7 @@ export default function App() {
               <input
                 type="text"
                 id="userName"
-                value={userName}
+                value={inputUserName}
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
@@ -66,7 +65,7 @@ export default function App() {
               <input
                 type="text"
                 id="firstName"
-                value={userFirstName}
+                value={firstName}
                 onChange={(e) => e.preventDefault()}
                 disabled
               />
@@ -76,7 +75,7 @@ export default function App() {
               <input
                 type="text"
                 id="lastName"
-                value={userLastName}
+                value={lastName}
                 onChange={(e) => e.preventDefault()}
                 disabled
               />
@@ -90,7 +89,7 @@ export default function App() {
             title="Save"
             Click= {(e) => {
               e.preventDefault();
-              dispatch(editUserName({ userName: userName, token: token }));
+              dispatch(editUserName({ userName: inputUserName, token: token }));
               changeUserStateClick();
             }}
             />

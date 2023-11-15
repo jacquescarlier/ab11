@@ -12,10 +12,9 @@ function Form() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const status = useSelector((state) => state.user.status);
-  const error = useSelector((state) => state.user.error);
+  const { status, error } = useSelector(state => state.user)
   const userId = useSelector((state) => state.user.user.userId);
-  
+
   useEffect(() => {
     if (status === true) {
       navigate(`/accounts/${userId}`)

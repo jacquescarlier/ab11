@@ -1,7 +1,7 @@
 import "../css/userAccount.css";
 import Account from "../components/accountCard/Account";
 import UserHeader from "../containers/nav/Nav";
-import EditNameSection from "../containers/editUserName/editUserName";
+import EditNameSection from "../containers/formEditUserName/formEditUserName";
 import { useSelector } from 'react-redux';
 import { Navigate } from "react-router-dom";
 
