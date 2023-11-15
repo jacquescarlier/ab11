@@ -1,15 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { userLogIn, editUserName } from "../api/ApiUser"
+export const logout = "LOGOUT"
 
 const initialState = {
-    user: {
-      email: "",
-      token: "",
-      firstName: "",
-      lastName: "",
-      userName: "",
-      userId: "",
-    },
+    user: "",
     status: false,
     error: "",
   };
@@ -36,7 +30,7 @@ const userLogInSlice = createSlice({
           state.status = "error";
           state.error = action.payload;
         })
-        .addCase("LOGOUT", (state) => {
+        .addCase(logout, (state) => {
           state.user = { token: "" };
           state.status = false;
           state.error = "";

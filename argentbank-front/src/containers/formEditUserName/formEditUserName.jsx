@@ -16,7 +16,7 @@ export default function App
   const [inputUserName, setUserName] = useState("");
   const [inputFirstName, setInputFirstName] = useState(firstName);
   const [inputLastName, setInputLastName] = useState(lastName);
-//function foredit button
+//function for edit button
   const handleClick = () => {
     setIsActive((current) => !current);
     setTitleText("Edit user info");

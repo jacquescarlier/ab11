@@ -1,9 +1,13 @@
 import Form from "../containers/form/Form";
 import Header from "../containers/nav/Nav";
-
+import { useSelector } from "react-redux";
 function SignIn() {
+  const status  = useSelector(state => state.user.user.status)
+ 
   return (
     <>
+    { !status && (
+      <>
       <Header />
       <div className="form_container">
         <main className="main bg-dark">
@@ -14,6 +18,7 @@ function SignIn() {
           </section>
         </main>
       </div>
+      </>)}
     </>
   );
 }
