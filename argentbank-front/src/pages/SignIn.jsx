@@ -1,7 +1,8 @@
 import Form from "../containers/form/Form";
 import Header from "../containers/nav/Nav";
 import { useSelector } from "react-redux";
-function SignIn() {
+
+export default function SignIn() {
   const status  = useSelector(state => state.user.user.status)
  
   return (
@@ -23,4 +24,3 @@ function SignIn() {
   );
 }
 
-export default SignIn;

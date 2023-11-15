@@ -40,9 +40,24 @@
   height: 10px;
 }
 .spanSignOut {
-  margin-left: 3px;
+  margin-left: 5px;
   font-size: 16px;
 }
 .userNameCircle {
   padding: 5px;
+}
+@media (max-width: 480px) {
+  .main-nav-item {
+    margin: 0;
+    padding: 0;
+  }
+.navLink {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: right;
+  justify-items: center;
+  gap: 5px;
+  
+}
+
 }

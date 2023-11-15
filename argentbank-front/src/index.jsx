@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import Routing from "./containers/router/Routing";
+import Routing from "./containers/router/Routing"
 import store from "./app/store";
 import { Provider } from "react-redux";
 import { persistStore} from 'redux-persist';

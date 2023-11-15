@@ -1,7 +1,7 @@
 import "../../index.css";
 import Button from "../button/button"
 
-function AccountCard({ title, amount, description }) {
+export default function AccountCard({ title, amount, description }) {
   return (
     <section className="account">
       <div className="account-content-wrapper">
@@ -20,4 +20,4 @@ function AccountCard({ title, amount, description }) {
     </section>
   );
 }
-export default AccountCard;
+

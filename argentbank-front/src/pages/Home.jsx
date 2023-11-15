@@ -2,7 +2,7 @@ import Banner from "../containers/banner/Banner";
 import Features from "../containers/features/Features";
 import Header from "../containers/nav/Nav";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Header />
@@ -14,4 +14,3 @@ function Home() {
   );
 }
 
-export default Home;

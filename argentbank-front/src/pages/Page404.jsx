@@ -3,7 +3,7 @@ import Nav from '../containers/nav/Nav';
 import { NavLink } from 'react-router-dom';
 import '../css/page404.css'
 
-const Page404 = () => {
+export default function Page404()  {
   return (
     <div>
       <div className="container-general">
@@ -20,4 +20,3 @@ const Page404 = () => {
   );
 };
 
-export default Page404;

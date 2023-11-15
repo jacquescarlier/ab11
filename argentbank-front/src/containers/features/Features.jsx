@@ -26,7 +26,7 @@ const featuresData =
   }
 ]
 
-function Features() {
+export default function Features() {
   return (
     <section className="features">
             <h2 className="sr-only">Features</h2>
@@ -41,4 +41,4 @@ function Features() {
   );
 }
 
-export default Features;
+

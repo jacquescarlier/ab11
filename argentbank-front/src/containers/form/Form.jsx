@@ -5,7 +5,7 @@ import { userLogIn } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import "./form.css";
 
-function Form() {
+export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false)
@@ -68,4 +68,3 @@ function Form() {
   );
 }
 
-export default Form;

@@ -1,6 +1,6 @@
 import "./banner.css";
 
-function Banner() {
+export default function Banner() {
   return (
     <div className="hero">
       <section className="hero-content">
@@ -14,4 +14,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+
