@@ -23,7 +23,7 @@ const AccountsData = [
   },
 ];
 
-function User() {
+function UserAccount() {
   const token = useSelector(state => state.user.user.token)
 
   return (
@@ -54,4 +54,4 @@ function User() {
   );
 }
 
-export default User;
+export default UserAccount;
