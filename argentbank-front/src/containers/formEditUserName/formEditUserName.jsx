@@ -10,7 +10,9 @@ export default function App
 
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
 //management of profile form inputs and the title
+//management of the edit button and the edit form depending on the isActive state
   const [isActive, setIsActive] = useState(false);
+  //constant for input and title of the profile edit form
   const [titleText, setTitleText] = useState("Welcome back");
   const [exclamationPoint, setExclamationPoint] = useState("!");
   const [inputUserName, setUserName] = useState("");
@@ -25,7 +27,7 @@ export default function App
     setExclamationPoint("");
   };
   // function for save and cancel button
-  const changeUserStateClick = () => {
+  const saveUserCloseForm = () => {
     setIsActive((current) => !current);
     setTitleText("Welcome back");
     setInputFirstName(firstName);
@@ -90,7 +92,7 @@ export default function App
             Click= {(e) => {
               e.preventDefault();
               dispatch(editUserName({ userName: inputUserName, token: token }));
-              changeUserStateClick();
+              saveUserCloseForm();
             }}
             />
              <Button 
@@ -99,7 +101,7 @@ export default function App
             title="Cancel"
             Click= {(e) => {
               e.preventDefault();
-              changeUserStateClick();
+              saveUserCloseForm();
             }}
             />
           </div>
