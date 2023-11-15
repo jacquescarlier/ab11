@@ -4,35 +4,18 @@ import { editUserName } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import "./formEditUserName.css"
 
-export default function App
-() {
+export default function App () {
   const dispatch = useDispatch();
-
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
-//management of profile form inputs and the title
-//management of the edit button and the edit form depending on the isActive state
+  //management of profile form inputs and the title
+  //management of the edit button and the edit form depending on the isActive state
   const [isActive, setIsActive] = useState(false);
-  //constant for input and title of the profile edit form
-  const [titleText, setTitleText] = useState("Welcome back");
-  const [exclamationPoint, setExclamationPoint] = useState("!");
   const [inputUserName, setUserName] = useState("");
   const [inputFirstName, setInputFirstName] = useState(firstName);
   const [inputLastName, setInputLastName] = useState(lastName);
-//function for edit button
-  const editButtonClick = () => {
-    setIsActive((current) => !current);
-    setTitleText("Edit user info");
-    setInputFirstName("");
-    setInputLastName("");
-    setExclamationPoint("");
-  };
-  // function for save and cancel button
+  // function for edit, save and cancel button
   const saveUserCloseForm = () => {
     setIsActive((current) => !current);
-    setTitleText("Welcome back");
-    setInputFirstName(firstName);
-    setInputLastName(lastName);
-    setExclamationPoint("!");
   };
 
   useEffect(() => {
@@ -41,11 +24,22 @@ export default function App
 
   return (
     <div className="userEdit">
-      <h2 className="userEdit_title">
-        {titleText}
-        <br />
-        {inputFirstName} {inputLastName} {exclamationPoint}
-      </h2>
+      {!isActive && (
+        <>
+          <h2 className="userEdit_title">
+            Welcome back
+            <br />
+            {inputFirstName} {inputLastName} !
+          </h2>
+        </>
+      )}
+      {isActive && (
+        <>
+          <h2 className="userEdit_title">
+            Edit user info
+          </h2>
+        </>
+      )}
       <div className="userName">
         <form
           className="userName_form"
@@ -84,38 +78,38 @@ export default function App
             </div>
           </div>
           <div className="userNameButton">
-         
-            <Button 
-            classButton = "editUserNameButton"
-            type= "onClick"
-            title="Save"
-            Click= {(e) => {
-              e.preventDefault();
-              dispatch(editUserName({ userName: inputUserName, token: token }));
-              saveUserCloseForm();
-            }}
+
+            <Button
+              classButton="editUserNameButton"
+              type="onClick"
+              title="Save"
+              Click={(e) => {
+                e.preventDefault();
+                dispatch(editUserName({ userName: inputUserName, token: token }));
+                saveUserCloseForm();
+              }}
             />
-             <Button 
-            classButton = "editUserNameButton"
-            type= "onClick"
-            title="Cancel"
-            Click= {(e) => {
-              e.preventDefault();
-              saveUserCloseForm();
-            }}
+            <Button
+              classButton="editUserNameButton"
+              type="onClick"
+              title="Cancel"
+              Click={(e) => {
+                e.preventDefault();
+                saveUserCloseForm();
+              }}
             />
           </div>
         </form>
       </div>
-      <Button 
-            classButton = "editUserNameButton"
-            type= "onClick"
-            title="Edit Name"
-            styleButton= 
-              {{display: isActive ? "none" : "",}}
-            
-            Click= {editButtonClick}
-            />
+      <Button
+        classButton="editUserNameButton editButton"
+        type="onClick"
+        title="Edit Name"
+        styleButton=
+        {{ display: isActive ? "none" : "", }}
+
+        Click={saveUserCloseForm}
+      />
     </div>
   );
 }
