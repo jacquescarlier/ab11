@@ -7,8 +7,6 @@ import "./formEditUserName.css"
 export default function App () {
   const dispatch = useDispatch();
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
-  //management of profile form inputs and the title
-  //management of the edit button and the edit form depending on the isActive state
   const [isActive, setIsActive] = useState(false);
   const [inputUserName, setUserName] = useState("");
   const [inputFirstName, setInputFirstName] = useState(firstName);
