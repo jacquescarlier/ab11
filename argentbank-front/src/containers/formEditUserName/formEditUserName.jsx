@@ -8,7 +8,7 @@ export default function App () {
   const dispatch = useDispatch();
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
   const [isActive, setIsActive] = useState(false);
-  const [inputUserName, setUserName] = useState("");
+  const [inputUserName, setInputUserName] = useState("");
 
   // function for edit, save and cancel button
   const saveUserCloseForm = () => {
@@ -16,7 +16,7 @@ export default function App () {
   };
 
   useEffect(() => {
-    setUserName(userName);
+    setInputUserName(userName);
   }, [userName]);
 
   return (
@@ -50,7 +50,7 @@ export default function App () {
                 type="text"
                 id="userName"
                 value={inputUserName}
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => setInputUserName(e.target.value)}
               />
             </div>
             <div className="userNameInput">

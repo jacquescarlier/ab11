@@ -1,11 +1,11 @@
-.buttons-form {
+/*.buttons-form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-}
+}*/
 h2 {
-  font-size: 1.5em;
+  font-size: 2em; /*1.5*/
 }
 .userName {
   display: flex;
@@ -21,10 +21,7 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 20%;
-}/*
-.user_input {
-  gap: 5px;
-}*/
+}
 .userNameInput {
   display: flex;
   flex-direction: row;
@@ -59,7 +56,7 @@ h2 {
 .editUserNameButton {
   background-color: #00bc77;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 20px;
   padding: 10px 40px;
   border-color: #00bc77;
