@@ -15,17 +15,17 @@ h2 {
   padding-top: 0.5em;
   margin-top: 0.5em;
 }
-.userName_form {
+.userNameForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 20%;
-}
+}/*
 .user_input {
   gap: 5px;
-}
-.userName_input {
+}*/
+.userNameInput {
   display: flex;
   flex-direction: row;
   padding: 0.5em;

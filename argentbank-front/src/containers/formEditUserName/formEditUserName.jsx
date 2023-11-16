@@ -9,8 +9,7 @@ export default function App () {
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
   const [isActive, setIsActive] = useState(false);
   const [inputUserName, setUserName] = useState("");
-  const [inputFirstName, setInputFirstName] = useState(firstName);
-  const [inputLastName, setInputLastName] = useState(lastName);
+
   // function for edit, save and cancel button
   const saveUserCloseForm = () => {
     setIsActive((current) => !current);
@@ -24,28 +23,28 @@ export default function App () {
     <div className="userEdit">
       {!isActive && (
         <>
-          <h2 className="userEdit_title">
+          <h2 className="userEditTitle">
             Welcome back
             <br />
-            {inputFirstName} {inputLastName} !
+            {firstName} {lastName} !
           </h2>
         </>
       )}
       {isActive && (
         <>
-          <h2 className="userEdit_title">
+          <h2 className="userEditTitle">
             Edit user info
           </h2>
         </>
       )}
       <div className="userName">
         <form
-          className="userName_form"
+          className="userNameForm"
           id="userNameEdit"
           style={{ display: isActive ? "flex" : "none" }}
         >
-          <div className="user_input">
-            <div className="userName_input">
+          <div className="userInput">
+            <div className="userNameInput">
               <label htmlFor="userName" className="labelFormSignin">User name: </label>
               <input
                 type="text"
@@ -54,7 +53,7 @@ export default function App () {
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
-            <div className="userName_input">
+            <div className="userNameInput">
               <label htmlFor="firstName" className="labelFormSignin">First name: </label>
               <input
                 type="text"
@@ -64,7 +63,7 @@ export default function App () {
                 disabled
               />
             </div>
-            <div className="userName_input">
+            <div className="userNameInput">
               <label htmlFor="lastName" className="labelFormSignin">Last name: </label>
               <input
                 type="text"
