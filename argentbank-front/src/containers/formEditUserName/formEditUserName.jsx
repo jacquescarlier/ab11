@@ -28,6 +28,12 @@ export default function App () {
             <br />
             {firstName} {lastName} !
           </h2>
+          <Button
+        classButton="editUserNameButton editButton"
+        type="onClick"
+        title="Edit Name"
+        Click={saveUserCloseForm}
+      />
         </>
       )}
       {isActive && (
@@ -35,13 +41,10 @@ export default function App () {
           <h2 className="userEditTitle">
             Edit user info
           </h2>
-        </>
-      )}
       <div className="userName">
         <form
           className="userNameForm"
           id="userNameEdit"
-          style={{ display: isActive ? "flex" : "none" }}
         >
           <div className="userInput">
             <div className="userNameInput">
@@ -75,7 +78,6 @@ export default function App () {
             </div>
           </div>
           <div className="userNameButton">
-
             <Button
               classButton="editUserNameButton"
               type="onClick"
@@ -98,15 +100,8 @@ export default function App () {
           </div>
         </form>
       </div>
-      <Button
-        classButton="editUserNameButton editButton"
-        type="onClick"
-        title="Edit Name"
-        styleButton=
-        {{ display: isActive ? "none" : "", }}
-
-        Click={saveUserCloseForm}
-      />
+      </>
+      )}
     </div>
   );
 }
