@@ -9,7 +9,6 @@ export default function App () {
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
   const [isActive, setIsActive] = useState(false);
   const [inputUserName, setInputUserName] = useState("");
-
   // function for edit, save and cancel button
   const saveUserCloseForm = () => {
     setIsActive((current) => !current);

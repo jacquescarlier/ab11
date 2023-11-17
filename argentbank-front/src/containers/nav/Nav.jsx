@@ -3,12 +3,11 @@ import argentBankLogo from "../../assets/img/argentBankLogo.webp";
 import "./nav.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-import {logOut} from "../../feature/user.slice"
+import { logOut } from "../../feature/user.slice"
 
 const Nav = () => {
   const dispatch = useDispatch()
-  const userName = useSelector(state => state.user.user.userName)
-  const token = useSelector(state => state.user.user.token)
+  const { userName, token } = useSelector(state => state.user.user)
   const navigate = useNavigate()
 
   const handleSignOut = (e) => {
