@@ -76,4 +76,3 @@ async function getUserInfos(token) {
   return response;
 }
 
-export const logout = "type: 'LOGOUT'"
