@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { userLogIn, editUserName } from "../api/ApiUser"
-export const logout = "LOGOUT"
 
 const initialState = {
     user: "",
@@ -11,7 +10,13 @@ const initialState = {
 const userLogInSlice = createSlice({
     name: "user",
     initialState,
-    reducers: {},
+    reducers: {
+      logOut: (state)=> {
+        state.user = " "
+        state.status = false;
+        state.error = "";
+      }
+    },
     extraReducers(builder) {
       builder
         .addCase(userLogIn.fulfilled, (state, action) => {
@@ -30,11 +35,6 @@ const userLogInSlice = createSlice({
           state.status = "error";
           state.error = action.payload;
         })
-        .addCase(logout, (state) => {
-          state.user = { token: "" };
-          state.status = false;
-          state.error = "";
-        })
         .addCase(editUserName.fulfilled, (state, action) => {
           let user = state.user;
           user.userName = action.payload.body.userName;
@@ -45,4 +45,5 @@ const userLogInSlice = createSlice({
   });
   
   export default userLogInSlice.reducer;
+  export const {logOut} = userLogInSlice.actions;
   

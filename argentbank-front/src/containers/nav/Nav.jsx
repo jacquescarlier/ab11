@@ -3,6 +3,7 @@ import argentBankLogo from "../../assets/img/argentBankLogo.webp";
 import "./nav.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
+import {logOut} from "../../feature/user.slice"
 
 const Nav = () => {
   const dispatch = useDispatch()
@@ -12,7 +13,7 @@ const Nav = () => {
 
   const handleSignOut = (e) => {
     e.preventDefault()
-    dispatch({ type: 'LOGOUT' });
+    dispatch(logOut());
     navigate('/')
   };
 
