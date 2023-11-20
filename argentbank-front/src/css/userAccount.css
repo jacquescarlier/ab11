@@ -52,7 +52,7 @@
   background-color: #00bc77;
   color: #fff;
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .account {
     flex-direction: row;
   }

@@ -1,6 +1,7 @@
 import Form from "../containers/form/Form";
 import Header from "../containers/nav/Nav";
 import { useSelector } from "react-redux";
+import "../css/signIn.css"
 
 export default function SignIn() {
   const status  = useSelector(state => state.user.user.status)
