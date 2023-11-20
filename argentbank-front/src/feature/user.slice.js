@@ -20,7 +20,7 @@ const userLogInSlice = createSlice({
     extraReducers(builder) {
       builder
         .addCase(userLogIn.fulfilled, (state, action) => {
-          state.user = {
+          state.user ={
             email: action.payload.email,
             token: action.payload.token,
             firstName: action.payload.data.firstName,

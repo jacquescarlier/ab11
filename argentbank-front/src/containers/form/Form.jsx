@@ -8,16 +8,15 @@ import "./form.css";
 export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false)
+ 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { status, error } = useSelector(state => state.user)
-  const userId = useSelector((state) => state.user.user.userId);
 
   useEffect(() => {
     if (status === true) {
-      navigate(`/accounts/${userId}`)
+      navigate(`/accounts/`)
     }
   })
 
@@ -49,9 +48,7 @@ export default function Form() {
       <div className="input-remember">
         <input
           type="checkbox"
-          id="remember-me"
-          checked={rememberMe}
-          onChange={(e) => setRememberMe(!rememberMe)}
+          id="remember-me"  
         />
         <label htmlFor="remember-me" className="labelCheckbox">Remember me</label>
       </div>

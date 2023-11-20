@@ -35,7 +35,7 @@ const Nav = () => {
         </div>}
       {token && (
         <div className="navLink">
-          <Link to="/accounts/`{userId}`" className="main-nav-item">
+          <Link to="/accounts/" className="main-nav-item">
             <i className="fa fa-user-circle"></i>
             <span className="userNameCircle">{userName}</span>
           </Link>

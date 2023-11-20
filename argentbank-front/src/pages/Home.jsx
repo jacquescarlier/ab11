@@ -1,5 +1,5 @@
 import Banner from "../containers/banner/Banner";
-import Features from "../components/features/Features";
+import Features from "../components/feature/Feature";
 import Header from "../containers/nav/Nav";
 import { featuresData } from "../data/data"
 import "../css/home.css"

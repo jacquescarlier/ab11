@@ -119,7 +119,7 @@ paths:
         - in: path
           name: accountId
           description: User's account ID
-          type: integer
+          type: string
           required: true
       responses:
         "200":
@@ -144,7 +144,7 @@ paths:
         - in: path
           name: accountId
           description: User's account ID
-          type: integer
+          type: string
           required: true
         - in: path
           name: transactionId
@@ -160,6 +160,8 @@ paths:
           description: Invalid Fields
         "401":
           description: Unauthorized
+        "403":
+        description: Forbidden
         "500":
           description: Internal Server Error
     put:
@@ -179,7 +181,7 @@ paths:
         - in: path
           name: accountId
           description: User's account ID
-          type: integer
+          type: string
           required: true
         - in: path
           name: transactionId
@@ -197,6 +199,8 @@ paths:
           description: Invalid Fields
         "401":
           description: Unauthorized
+        "422":
+        description: Unprocessable Entity 
         "500":
           description: Internal Server Error
 securityDefinitions:

@@ -12,7 +12,7 @@ const Routing = () => {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/login" element={<SignIn />} />
-        <Route path="/accounts/:userId" element={<UserAccount />} />
+        <Route path="/accounts/" element={<UserAccount />} />
         <Route path="*" element={<Page404 />} />
         <Route path="/accounts/*" element={<Page404 />} />
       </Routes>
