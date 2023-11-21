@@ -71,7 +71,7 @@ export default function App () {
             divClassName = "userNameInput"
             htmlFor="firstName"
             labelClass ="labelFormSignin"
-            labelTitle="First Name: "
+            labelTitle="First name: "
             type="text"
             inputId="firstName"
             onChange={(e) => e.preventDefault()}
@@ -92,7 +92,7 @@ export default function App () {
             divClassName = "userNameInput"
             htmlFor="lastName"
             labelClass ="labelFormSignin"
-            labelTitle="Last Name: "
+            labelTitle="Last name: "
             type="text"
             inputId="lastName"
             onChange={(e) => e.preventDefault()}

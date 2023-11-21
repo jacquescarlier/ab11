@@ -26,14 +26,14 @@ export default function Form() {
       <InputForm
         divClassName="input-wrapper"
         htmlFor="email"
-        labelTitle="Email"
+        labelTitle="Username"
         type="email"
         inputId="email"
         autocomplete="email"
         onChange={(e) => setEmail(e.target.value)}
       />
       { /*} <div className="input-wrapper">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Username</label>
         <input
           type="email"
           id="email"
