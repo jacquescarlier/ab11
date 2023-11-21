@@ -1,6 +1,6 @@
 import React from 'react';
 
-const button = ({ title, classButton, type, Click, styleButton }) => {
+export default function button ({ title, classButton, type, Click, styleButton }) {
     return (
         <>
             <button
@@ -15,4 +15,3 @@ const button = ({ title, classButton, type, Click, styleButton }) => {
     );
 };
 
-export default button;

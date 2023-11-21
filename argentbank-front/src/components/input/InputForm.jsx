@@ -1,4 +1,4 @@
-const InputForm = ({divClassName, htmlFor, labelTitle, type,inputId, autocomplete,onChange, labelClass, value, disabled }) => {
+export default function InputForm ({divClassName, htmlFor, labelTitle, type,inputId, autocomplete,onChange, labelClass, value, disabled }) {
 
     return (
         <div className={divClassName}>
@@ -14,4 +14,3 @@ const InputForm = ({divClassName, htmlFor, labelTitle, type,inputId, autocomplet
         </div>
     );
 }
-export default InputForm;
