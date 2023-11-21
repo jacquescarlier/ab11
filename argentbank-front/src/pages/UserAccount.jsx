@@ -1,4 +1,5 @@
 import "../css/userAccount.css";
+import "../index.css"
 import Account from "../components/accountCard/Account";
 import UserHeader from "../containers/nav/Nav";
 import EditNameSection from "../containers/formEditUserName/formEditUserName";

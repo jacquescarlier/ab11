@@ -1,4 +1,3 @@
-import "../../index.css";
 import Button from "../button/button"
 
 export default function AccountCard({ title, amount, description }) {

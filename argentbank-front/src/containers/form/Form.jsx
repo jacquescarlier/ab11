@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../api/ApiUser";
 import Button from "../../components/button/button"
+import InputForm from "../../components/input/InputForm"
 import "./form.css";
 
 export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,7 +23,16 @@ export default function Form() {
 
   return (
     <form id="logIn">
-      <div className="input-wrapper">
+      <InputForm
+        divClassName="input-wrapper"
+        htmlFor="email"
+        labelTitle="Email"
+        type="email"
+        inputId="email"
+        autocomplete="email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      { /*} <div className="input-wrapper">
         <label htmlFor="email">Email</label>
         <input
           type="email"
@@ -30,8 +40,17 @@ export default function Form() {
           autoComplete="email"
           onChange={(e) => setEmail(e.target.value)}
         />
-      </div>
-      <div className="input-wrapper">
+  </div> */ }
+      <InputForm
+        divClassName="input-wrapper"
+        htmlFor="password"
+        labelTitle="Password"
+        type="password"
+        inputId="password"
+        autocomplete="password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      { /*}  <div className="input-wrapper">
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -39,7 +58,7 @@ export default function Form() {
           autoComplete="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
+</div> */ }
       {status === "error" && (
         <div className="errorMessage" id="errorText">
           {error}
@@ -48,7 +67,7 @@ export default function Form() {
       <div className="input-remember">
         <input
           type="checkbox"
-          id="remember-me"  
+          id="remember-me"
         />
         <label htmlFor="remember-me" className="labelCheckbox">Remember me</label>
       </div>
