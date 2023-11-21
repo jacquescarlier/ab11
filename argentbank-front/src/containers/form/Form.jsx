@@ -64,13 +64,20 @@ export default function Form() {
           {error}
         </div>
       )}
-      <div className="input-remember">
-        <input
+      
+        { /* <input
           type="checkbox"
           id="remember-me"
+      /> */ }
+        <InputForm 
+        divClassName = "input-remember"
+        htmlFor="remember-me"
+        labelTitle="Remember me"
+        type="checkbox"
+        inputId="remember-me"
         />
-        <label htmlFor="remember-me" className="labelCheckbox">Remember me</label>
-      </div>
+         { /* <label htmlFor="remember-me" className="labelCheckbox">Remember me</label> */ }
+      
       <Button
         classButton="sign-in-button"
         title="Sign In"

@@ -1,5 +1,7 @@
 .input-remember {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
   color: black;
 }
 .input-remember label {
