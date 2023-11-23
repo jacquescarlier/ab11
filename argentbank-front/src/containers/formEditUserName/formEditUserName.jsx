@@ -80,10 +80,10 @@ export default function App() {
                   />
                 </div>
                 <div className="userNameInput">
-                  <LabelForm 
-                  htmlFor="lastName"
-                  labelClass="labelFormSignin"
-                  labelTitle="Last name: "
+                  <LabelForm
+                    htmlFor="lastName"
+                    labelClass="labelFormSignin"
+                    labelTitle="Last name: "
                   />
                   <InputForm
                     divClassName="userNameInput"
