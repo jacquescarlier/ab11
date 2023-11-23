@@ -1,11 +1,9 @@
-export default function InputForm ({divClassName, htmlFor, labelTitle, type,inputId, autocomplete,onChange, labelClass, value, disabled }) {
+export default function InputForm({ name, type, inputId, autocomplete, onChange, value, disabled }) {
 
     return (
-        <div className={divClassName}>
-            <label htmlFor={htmlFor} className={labelClass}>{labelTitle}
-            </label>
+        <>
             <input
-                name={htmlFor}
+                name={name}
                 type={type}
                 id={inputId}
                 autoComplete={autocomplete}
@@ -13,6 +11,6 @@ export default function InputForm ({divClassName, htmlFor, labelTitle, type,inpu
                 value={value}
                 disabled={disabled}
             />
-        </div>
+        </>
     );
 }

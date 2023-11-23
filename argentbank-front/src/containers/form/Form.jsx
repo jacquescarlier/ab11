@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import InputForm from "../../components/input/InputForm"
+import LabelForm from "../../components/label/LabelForm"
 import "./form.css";
 
 export default function Form() {
@@ -23,61 +24,48 @@ export default function Form() {
 
   return (
     <form id="logIn">
-      <InputForm
-        divClassName="input-wrapper"
-        htmlFor="email"
-        labelTitle="Username"
-        type="email"
-        inputId="email"
-        autocomplete="email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      { /*} <div className="input-wrapper">
-        <label htmlFor="email">Username</label>
-        <input
+      <div className="input-wrapper">
+        <LabelForm
+          labelTitle="Username"
+          htmlFor="email"
+        />
+        <InputForm
+          name="email"
           type="email"
-          id="email"
-          autoComplete="email"
+          inputId="email"
+          autocomplete="email"
           onChange={(e) => setEmail(e.target.value)}
         />
-  </div> */ }
-      <InputForm
-        divClassName="input-wrapper"
-        htmlFor="password"
-        labelTitle="Password"
-        type="password"
-        inputId="password"
-        autocomplete="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      { /*}  <div className="input-wrapper">
-        <label htmlFor="password">Password</label>
-        <input
+      </div>
+      <div className="input-wrapper">
+        <LabelForm
+          labelTitle="Password"
+          htmlFor="password"
+        />
+        <InputForm
+          name="password"
           type="password"
-          id="password"
-          autoComplete="password"
+          inputId="password"
+          autocomplete="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-</div> */ }
+      </div>
       {status === "error" && (
         <div className="errorMessage" id="errorText">
           {error}
         </div>
       )}
-      
-        { /* <input
+      <div className="input-remember">
+        <InputForm
+          name="remember-me"
           type="checkbox"
-          id="remember-me"
-      /> */ }
-        <InputForm 
-        divClassName = "input-remember"
-        htmlFor="remember-me"
-        labelTitle="Remember me"
-        type="checkbox"
-        inputId="remember-me"
+          inputId="remember-me"
         />
-         { /* <label htmlFor="remember-me" className="labelCheckbox">Remember me</label> */ }
-      
+        <LabelForm
+          labelTitle="Remember me"
+          htmlFor="remember-me"
+        />
+      </div>
       <Button
         classButton="sign-in-button"
         title="Sign In"
@@ -91,3 +79,25 @@ export default function Form() {
   );
 }
 
+/*
+ { /*<InputForm
+        divClassName="input-wrapper"
+        htmlFor="password"
+        labelTitle="Password"
+        type="password"
+        inputId="password"
+        autocomplete="password"
+        onChange={(e) => setPassword(e.target.value)}
+/> 
+
+
+      <InputForm 
+        divClassName = "input-remember"
+        htmlFor="remember-me"
+        labelTitle="Remember me"
+        type="checkbox"
+        inputId="remember-me"
+    /> 
+       
+
+*/
