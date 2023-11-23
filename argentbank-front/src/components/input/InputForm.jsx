@@ -2,8 +2,10 @@ export default function InputForm ({divClassName, htmlFor, labelTitle, type,inpu
 
     return (
         <div className={divClassName}>
-            <label htmlFor={htmlFor} className={labelClass}>{labelTitle}</label>
+            <label htmlFor={htmlFor} className={labelClass}>{labelTitle}
+            </label>
             <input
+                name={htmlFor}
                 type={type}
                 id={inputId}
                 autoComplete={autocomplete}
