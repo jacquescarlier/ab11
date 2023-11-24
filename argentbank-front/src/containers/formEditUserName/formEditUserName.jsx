@@ -6,7 +6,7 @@ import InputForm from "../../components/input/InputForm"
 import LabelForm from "../../components/label/LabelForm"
 import "./formEditUserName.css"
 
-export default function App() {
+export default function FormEditUserName() {
   const dispatch = useDispatch();
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
   const [isActive, setIsActive] = useState(false);
