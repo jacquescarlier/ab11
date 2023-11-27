@@ -1,4 +1,4 @@
-import Form from "../containers/form/Form";
+import Form from "../containers/loginForm/LoginForm";
 import Header from "../containers/nav/Nav";
 import { useSelector } from "react-redux";
 import "../css/signIn.css"

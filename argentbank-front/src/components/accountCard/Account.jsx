@@ -13,7 +13,6 @@ export default function AccountCard({ title, amount, description }) {
           classButton="transaction-button"
           type="onClick"
           title="View transactions"
-          click=""
         />
       </div>
     </section>

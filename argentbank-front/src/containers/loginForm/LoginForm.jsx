@@ -5,7 +5,7 @@ import { userLogIn } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import InputForm from "../../components/input/InputForm"
 import LabelForm from "../../components/label/LabelForm"
-import "./form.css";
+import "./loginForm.css";
 
 export default function Form() {
   const [email, setEmail] = useState("");
@@ -70,7 +70,7 @@ export default function Form() {
         classButton="sign-in-button"
         title="Sign In"
         type="onClick"
-        Click={(e) => {
+        onClick={(e) => {
           e.preventDefault();
           dispatch(userLogIn({ email: email, password: password }));
         }}

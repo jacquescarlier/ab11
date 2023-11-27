@@ -12,7 +12,7 @@ export default function FormEditUserName() {
   const [isActive, setIsActive] = useState(false);
   const [inputUserName, setInputUserName] = useState("");
   // function for edit, save and cancel button
-  const saveUserCloseForm = () => {
+  const toggleForm = () => {
     setIsActive((current) => !current);
   };
 
@@ -33,7 +33,7 @@ export default function FormEditUserName() {
             classButton="editUserNameButton editButton"
             type="onClick"
             title="Edit Name"
-            Click={saveUserCloseForm}
+            onClick={toggleForm}
           />
         </>
       )}
@@ -101,19 +101,19 @@ export default function FormEditUserName() {
                   classButton="editUserNameButton"
                   type="onClick"
                   title="Save"
-                  Click={(e) => {
+                  onClick={(e) => {
                     e.preventDefault();
                     dispatch(editUserName({ userName: inputUserName, token: token }));
-                    saveUserCloseForm();
+                    toggleForm();
                   }}
                 />
                 <Button
                   classButton="editUserNameButton"
-                  type="onClick"
+                  type= "onClick"
                   title="Cancel"
-                  Click={(e) => {
+                  onClick={(e) => {
                     e.preventDefault();
-                    saveUserCloseForm();
+                    toggleForm();
                   }}
                 />
               </div>
