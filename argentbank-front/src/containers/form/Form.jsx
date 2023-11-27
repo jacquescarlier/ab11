@@ -78,26 +78,3 @@ export default function Form() {
     </form>
   );
 }
-
-/*
- { /*<InputForm
-        divClassName="input-wrapper"
-        htmlFor="password"
-        labelTitle="Password"
-        type="password"
-        inputId="password"
-        autocomplete="password"
-        onChange={(e) => setPassword(e.target.value)}
-/> 
-
-
-      <InputForm 
-        divClassName = "input-remember"
-        htmlFor="remember-me"
-        labelTitle="Remember me"
-        type="checkbox"
-        inputId="remember-me"
-    /> 
-       
-
-*/
