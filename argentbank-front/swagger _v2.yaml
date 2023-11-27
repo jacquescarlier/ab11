@@ -107,7 +107,7 @@ paths:
           description: Unauthorized
         "500":
           description: Internal Server Error
-  /accounts/{accountId}:
+  /accounts/:
     get:
       security:
         - Bearer: []
@@ -115,12 +115,6 @@ paths:
         - User Module
       summary: User's Accounts API
       description: API for getting user's accounts
-      parameters:
-        - in: path
-          name: accountId
-          description: User's account ID
-          type: string
-          required: true
       responses:
         "200":
           description: User's accounts retrieved successfully
@@ -132,7 +126,7 @@ paths:
           description: Unauthorized
         "500":
           description: Internal Server Error
-  /accounts/{accountId}/transactions/:
+  /account/{accountId}/transactions/:
     get:
       security:
         - Bearer: []
@@ -197,17 +191,17 @@ paths:
       summary: Account Transactions API
       description: API for updating transaction's details
       parameters:
+        - in: path
+          name: accountId
+          description: User's account ID
+          type: string
+          required: true
         - in: body
           name: body
           description: Update user profile attributes
           required: true
           schema:
             $ref: "#/definitions/UpdateTransactionDetails"
-        - in: path
-          name: accountId
-          description: User's account ID
-          type: string
-          required: true
         - in: path
           name: transactionId
           description: Transaction ID
