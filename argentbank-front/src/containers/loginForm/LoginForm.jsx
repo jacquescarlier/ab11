@@ -7,7 +7,7 @@ import InputForm from "../../components/input/InputForm"
 import LabelForm from "../../components/label/LabelForm"
 import "./loginForm.css";
 
-export default function Form() {
+export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

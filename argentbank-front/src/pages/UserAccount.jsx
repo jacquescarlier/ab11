@@ -2,7 +2,7 @@ import "../css/userAccount.css";
 import "../index.css"
 import Account from "../components/accountCard/Account";
 import UserHeader from "../containers/nav/Nav";
-import EditNameSection from "../containers/formEditUserName/formEditUserName";
+import EditNameSection from "../containers/editUserNameForm/editUserNameForm";
 import { useSelector } from 'react-redux';
 import { Navigate } from "react-router-dom";
 import { accountsData } from "../data/data"

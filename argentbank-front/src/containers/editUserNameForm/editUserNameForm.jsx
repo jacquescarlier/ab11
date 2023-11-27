@@ -4,16 +4,16 @@ import { editUserName } from "../../api/ApiUser";
 import Button from "../../components/button/button"
 import InputForm from "../../components/input/InputForm"
 import LabelForm from "../../components/label/LabelForm"
-import "./formEditUserName.css"
+import "./editUserNameForm.css"
 
-export default function FormEditUserName() {
+export default function EditUserNameForm() {
   const dispatch = useDispatch();
   const { userName, firstName, lastName, token } = useSelector(state => state.user.user)
-  const [isActive, setIsActive] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
   const [inputUserName, setInputUserName] = useState("");
   // function for edit, save and cancel button
   const toggleForm = () => {
-    setIsActive((current) => !current);
+    setIsToggle((current) => !current);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function FormEditUserName() {
 
   return (
     <div className="userEdit">
-      {!isActive && (
+      {!isToggle && (
         <>
           <h2 className="userEditTitle">
             Welcome back
@@ -37,7 +37,7 @@ export default function FormEditUserName() {
           />
         </>
       )}
-      {isActive && (
+      {isToggle && (
         <>
           <h2 className="userEditTitle">
             Edit user info
