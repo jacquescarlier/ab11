@@ -9,6 +9,8 @@ import { accountsData } from "../data/data"
 
 export default function UserAccount() {
   const token = useSelector(state => state.user.user.token)
+  const isTransactionPage = true; // ou false, en fonction de la logique de votre application
+  const buttonTitle = isTransactionPage ? "View transactions" : "Go back to account";
 
   return (
     <>
@@ -27,6 +29,7 @@ export default function UserAccount() {
                 title={account.title}
                 amount={account.amount}
                 description={account.description}
+                titleButton={buttonTitle}
               />
             ))}
           </main>

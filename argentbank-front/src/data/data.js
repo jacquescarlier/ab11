@@ -54,7 +54,7 @@ export const tansactionsData = [
         description: "Golden Sun",
         details: ["Electronic", "Food", "Car" ],
         amount: "80 €",
-        balance: "298.34 €"
+        balance: "298.34 €",
     },
     {
         date: "29/10/2023",

@@ -4,8 +4,12 @@ import Header from "../containers/nav/Nav";
 import { useLocation } from 'react-router-dom';
 import "../css/transactions.css"
 export default function Transaction() {
+
     const location = useLocation();
     const { title, amount, description } = location.state || {};
+
+    const isTransactionPage = false; // ou false, en fonction de la logique de votre application
+    const buttonTitle = isTransactionPage ? "View transactions" : "Go back to account";
     return (
         <>
             <Header />
@@ -13,11 +17,12 @@ export default function Transaction() {
 
                 <h2 className="sr-only">Accounts</h2>
                 <Account
-                className = "transactions-margin"
+                    className="transactions-margin"
                     key={title}
                     title={title}
                     amount={amount}
                     description={description}
+                    titleButton={buttonTitle}
                 />
                 <div className="details-account">
                     <span>Date</span>
@@ -27,7 +32,7 @@ export default function Transaction() {
                     <span></span>
                 </div>
             </main>
-        
+
         </>
     );
 }

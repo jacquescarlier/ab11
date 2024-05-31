@@ -1,14 +1,18 @@
 import Button from "../button/button"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-export default function AccountCard({ title, amount, description }) {
+export default function AccountCard({ title, amount, description, titleButton }) {
   const navigate = useNavigate()
+  const location = useLocation();
+
   const handleTransactions = (e) => {
-      e.preventDefault()
-      navigate('/transactions/', { state: { title, amount, description } })
-    };
-
-
+    e.preventDefault()
+    if (location.pathname === '/accounts/') {
+      navigate('/transactions/', { state: { title, amount, description } });
+    } else {
+      navigate('/accounts/', { state: { title, amount, description } });
+    }
+  };
 
   return (
     <section className="account">
@@ -21,7 +25,7 @@ export default function AccountCard({ title, amount, description }) {
         <Button
           classButton="transaction-button"
           type="onClick"
-          title="View transactions"
+          title={titleButton}
           onClick={handleTransactions}
         />
       </div>
