@@ -1,0 +1,11 @@
+.transactions-padding {
+    padding-top: 50px;
+}
+.details-account {
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 14%;
+}

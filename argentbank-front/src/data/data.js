@@ -41,4 +41,27 @@ export const accountsData = [
     },
 ];
 
+export const tansactionsData = [
+    {
+        date: "27/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car" ],
+        amount: "8 €",
+        balance: "298.34 €"
+    },
+    {
+        date: "28/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car" ],
+        amount: "80 €",
+        balance: "298.34 €"
+    },
+    {
+        date: "29/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car" ],
+        amount: "88 €",
+        balance: "298.34 €"
+    },
+]
 

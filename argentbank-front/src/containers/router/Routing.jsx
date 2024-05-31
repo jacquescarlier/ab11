@@ -5,6 +5,7 @@ import SignIn from "../../pages/SignIn";
 import UserAccount from "../../pages/UserAccount"
 import Page404 from "../../pages/Page404"
 import Footer from "../footer/Footer";
+import Transaction from "../../pages/Transaction";
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
         <Route path="" element={<Home />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/accounts/" element={<UserAccount />} />
+        <Route path="/transactions/" element={<Transaction />} />
         <Route path="*" element={<Page404 />} />
         <Route path="/accounts/*" element={<Page404 />} />
       </Routes>

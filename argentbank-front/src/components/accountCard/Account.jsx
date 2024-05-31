@@ -1,6 +1,15 @@
 import Button from "../button/button"
+import { useNavigate } from "react-router-dom";
 
 export default function AccountCard({ title, amount, description }) {
+  const navigate = useNavigate()
+  const handleTransactions = (e) => {
+      e.preventDefault()
+      navigate('/transactions/', { state: { title, amount, description } })
+    };
+
+
+
   return (
     <section className="account">
       <div className="account-content-wrapper">
@@ -13,6 +22,7 @@ export default function AccountCard({ title, amount, description }) {
           classButton="transaction-button"
           type="onClick"
           title="View transactions"
+          onClick={handleTransactions}
         />
       </div>
     </section>

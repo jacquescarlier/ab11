@@ -13,6 +13,7 @@ const Nav = () => {
   const handleSignOut = (e) => {
     e.preventDefault()
     dispatch(logOut());
+    localStorage.removeItem('user')
     navigate('/')
   };
 

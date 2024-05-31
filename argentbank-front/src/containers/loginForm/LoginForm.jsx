@@ -10,6 +10,7 @@ import "./loginForm.css";
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function LoginForm() {
       navigate(`/accounts/`)
     }
   })
+
 
   return (
     <form id="logIn">
@@ -60,6 +62,8 @@ export default function LoginForm() {
           name="remember-me"
           type="checkbox"
           inputId="remember-me"
+          checked={rememberMe}
+          onChange={(e) => setRememberMe(e.target.checked)}
         />
         <LabelForm
           labelTitle="Remember me"
@@ -72,7 +76,7 @@ export default function LoginForm() {
         type="onClick"
         onClick={(e) => {
           e.preventDefault();
-          dispatch(userLogIn({ email: email, password: password }));
+          dispatch(userLogIn({ email: email, password: password, rememberMe: rememberMe }));
         }}
       />
     </form>

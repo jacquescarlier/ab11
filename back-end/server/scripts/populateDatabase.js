@@ -15,7 +15,14 @@ const users = [
     email: 'steve@rogers.com',
     password: 'password456',
     userName: 'Captain'
-  }
+  },
+  {
+    firstName: 'Pit',
+    lastName: 'Lapitou',
+    email: 'lapitou@wawa.com',
+    password: 'password789',
+    userName: 'PitTheWho'
+  },
 ]
 
 users.forEach(user => {

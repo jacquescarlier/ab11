@@ -4,7 +4,7 @@ const urlFetchPofile = "http://localhost:3001/api/v1/user/profile"
 // user login
 export const userLogIn = createAsyncThunk(
   "user/logIn",
-  async ({ email, password }, thunkApi) => {
+  async ({ email, password, rememberMe }, thunkApi) => {
     try {
       const response = await fetch(urlFetchLogin, {
         method: "POST",
@@ -24,6 +24,10 @@ export const userLogIn = createAsyncThunk(
           return data;
         });
       const user = await getUserInfos(response.body.token);
+     
+      if (rememberMe === true ){
+        localStorage.setItem('user', JSON.stringify ({ email: email, password: password, token: response.body.token }))
+      }
       return { email: email, data: user.body, token: response.body.token };
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
