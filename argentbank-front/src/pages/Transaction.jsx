@@ -8,8 +8,7 @@ export default function Transaction() {
     const location = useLocation();
     const { title, amount, description } = location.state || {};
 
-    const isTransactionPage = false; // ou false, en fonction de la logique de votre application
-    const buttonTitle = isTransactionPage ? "View transactions" : "Go back to account";
+    const buttonTitle =  "Go back to account";
     return (
         <>
             <Header />

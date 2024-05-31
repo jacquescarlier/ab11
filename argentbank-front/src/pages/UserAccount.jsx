@@ -8,9 +8,8 @@ import { Navigate } from "react-router-dom";
 import { accountsData } from "../data/data"
 
 export default function UserAccount() {
-  const token = useSelector(state => state.user.user.token)
-  const isTransactionPage = true; // ou false, en fonction de la logique de votre application
-  const buttonTitle = isTransactionPage ? "View transactions" : "Go back to account";
+  const token = useSelector(state => state.user.user.token);
+  const buttonTitle = "View transactions";
 
   return (
     <>
