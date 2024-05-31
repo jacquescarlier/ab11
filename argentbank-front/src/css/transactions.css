@@ -1,11 +1,28 @@
 .transactions-padding {
-    padding-top: 50px;
+  padding-top: 50px;
 }
-.details-account {
-    color: white;
-    font-size: 2em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 14%;
+.account {
+  width: 86%;
 }
+ul {
+  list-style: none;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 14%;
+  font-size: 2em;
+  color: black;
+  background: white;
+  width: 83%;
+  margin: 0 0 0 7.5%;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}/*
+ .tabTitle {
+  background-color: transparent;
+  color: green;
+  display: flex;
+  gap: 14%;
+   justify-content: space-between;
+}*/

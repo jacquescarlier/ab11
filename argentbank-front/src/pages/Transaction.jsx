@@ -3,6 +3,8 @@ import Account from "../components/accountCard/Account";
 import Header from "../containers/nav/Nav";
 import { useLocation } from 'react-router-dom';
 import "../css/transactions.css"
+import TransactionsDetails from "../components/transactionDetails/TransactionDetails";
+
 export default function Transaction() {
 
     const location = useLocation();
@@ -23,13 +25,17 @@ export default function Transaction() {
                     description={description}
                     titleButton={buttonTitle}
                 />
-                <div className="details-account">
-                    <span>Date</span>
-                    <span>Description</span>
-                    <span>Amount</span>
-                    <span>Balance</span>
-                    <span></span>
-                </div>
+                
+                {transactionsData.map((transaction) => (
+              <TransactionsDetails
+                key={transaction.date}
+                date={transaction.date}
+                description={transaction.description}
+                amount={transaction.amount}
+                balance={transaction.balance}
+                
+              />
+            ))}
             </main>
 
         </>
