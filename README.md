@@ -1,7 +1,7 @@
 # Argent Bank
 
 Projet 11 de la formation intégrateur web d'openClassrooms.
-
+Apprentissage du state manager Redux pour gérer l'état d'une application.
 ## Installation back end
 
 node.js doit être installé sur votre système.
