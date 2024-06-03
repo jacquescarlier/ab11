@@ -26,4 +26,5 @@ npm start
 ## Images du projet.
 ![Accueil.](./img/argentbank1.webp)
 ![Login](./img/argentbank2.webp)
+![Account](./img/argentbank4.webp)
 ![redux](./img/argentbank5.webp)
