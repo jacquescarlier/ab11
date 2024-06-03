@@ -23,4 +23,7 @@ npm install
 ```bash
 npm start
 ```
-
+## Images du projet.
+![Accueil.](./img/argentbank1.webp)
+![Login](./img/argentbank2.webp)
+.[redux](./img/argentbank5.webp)
