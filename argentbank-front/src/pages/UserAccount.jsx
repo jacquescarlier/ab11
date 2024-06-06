@@ -25,6 +25,7 @@ export default function UserAccount() {
             {accountsData.map((account) => (
               <Account
                 key={account.id}
+                id={account.id}
                 title={account.title}
                 amount={account.amount}
                 description={account.description}

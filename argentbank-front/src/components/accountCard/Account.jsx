@@ -1,16 +1,16 @@
 import Button from "../button/button"
 import { useNavigate, useLocation } from "react-router-dom";
 
-export default function AccountCard({ title, amount, description, titleButton, id, tag }) {
+export default function AccountCard({ title, amount, description, titleButton, id }) {
   const navigate = useNavigate()
   const location = useLocation();
 
   const handleTransactions = (e) => {
     e.preventDefault()
     if (location.pathname === '/accounts/') {
-      navigate('/transactions/', { state: { title, amount, description, tag } });
+      navigate('/transactions/', { state: { title, amount, description, id } });
     } else {
-      navigate('/accounts/', { state: { title, amount, description, tag } });
+      navigate('/accounts/', { state: { title, amount, description, id } });
     }
   };
 

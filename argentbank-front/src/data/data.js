@@ -26,14 +26,12 @@ export const featuresData = [
 export const accountsData = [
     {
         id: "0a0a0a",
-        tag: "checkingData",
         title: "Argent Bank Checking (x8349)",
         amount: "$2,082.79",
         description: "Available Balance",
     },
     {
         id: "1b1b1b",
-        tag: "savingData",
         title: "Argent Bank Savings (x6712)",
         amount: "$10,928.42",
         description: "Available Balance",
@@ -41,7 +39,6 @@ export const accountsData = [
 
     {
         id: "2c2c2c",
-        tag: "creditCardData",
         title: "Argent Bank Credit Card (x8349)",
         amount: "$184.30",
         description: "Current Balance",
