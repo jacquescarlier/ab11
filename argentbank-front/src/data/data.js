@@ -25,23 +25,90 @@ export const featuresData = [
 
 export const accountsData = [
     {
+        id: "0a0a0a",
+        tag: "checkingData",
         title: "Argent Bank Checking (x8349)",
         amount: "$2,082.79",
         description: "Available Balance",
     },
     {
+        id: "1b1b1b",
+        tag: "savingData",
         title: "Argent Bank Savings (x6712)",
         amount: "$10,928.42",
         description: "Available Balance",
     },
+
     {
+        id: "2c2c2c",
+        tag: "creditCardData",
         title: "Argent Bank Credit Card (x8349)",
         amount: "$184.30",
         description: "Current Balance",
     },
+
 ];
 
-export const transactionsData = [
+export const checkingData = [
+    {
+        date: "Date",
+        description: "Description",
+        amount: "Amount",
+        balance: "Balance",
+    },
+    {
+        date: "07/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "_8 €",
+        balance: "298.34 €"
+    },
+    {
+        date: "08/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "80 €",
+        balance: "298.34 €",
+    },
+    {
+        date: "09/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "88 €",
+        balance: "298.34 €"
+    },
+];
+
+export const SavingData = [
+    {
+        date: "Date",
+        description: "Description",
+        amount: "Amount",
+        balance: "Balance",
+    },
+    {
+        date: "17/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "18 €",
+        balance: "298.34 €"
+    },
+    {
+        date: "18/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "50 €",
+        balance: "298.34 €",
+    },
+    {
+        date: "19/10/2023",
+        description: "Golden Sun",
+        details: ["Electronic", "Food", "Car"],
+        amount: "68 €",
+        balance: "298.34 €"
+    },
+]
+export const creditCardData = [
     {
         date: "Date",
         description: "Description",
@@ -51,23 +118,22 @@ export const transactionsData = [
     {
         date: "27/10/2023",
         description: "Golden Sun",
-        details: ["Electronic", "Food", "Car" ],
-        amount: "_8 €",
+        details: ["Electronic", "Food", "Car"],
+        amount: "38 €",
         balance: "298.34 €"
     },
     {
         date: "28/10/2023",
         description: "Golden Sun",
-        details: ["Electronic", "Food", "Car" ],
-        amount: "80 €",
+        details: ["Electronic", "Food", "Car"],
+        amount: "65 €",
         balance: "298.34 €",
     },
     {
         date: "29/10/2023",
         description: "Golden Sun",
-        details: ["Electronic", "Food", "Car" ],
-        amount: "88 €",
+        details: ["Electronic", "Food", "Car"],
+        amount: "99 €",
         balance: "298.34 €"
     },
 ]
-

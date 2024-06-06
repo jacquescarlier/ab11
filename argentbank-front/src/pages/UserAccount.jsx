@@ -24,7 +24,7 @@ export default function UserAccount() {
             <h2 className="sr-only">Accounts</h2>
             {accountsData.map((account) => (
               <Account
-                key={account.title}
+                key={account.id}
                 title={account.title}
                 amount={account.amount}
                 description={account.description}

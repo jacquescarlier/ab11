@@ -1,5 +1,3 @@
-
-
 export default function TransactionsDetails({ date, description, amount, balance, arrow }) {
     return (
         <ul>

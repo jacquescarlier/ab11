@@ -11,9 +11,7 @@ let persistor = persistStore(store);
 // Vérifier les données utilisateur sauvegardées dans le localStorage ou sessionStorage pour rememberMe
 const user = JSON.parse(localStorage.getItem('user')) || JSON.parse(sessionStorage.getItem('user'));
 if (user) {
-  store.
- 
-dispatch( userLogIn (user, true));
+  store.dispatch( userLogIn (user, true));
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
