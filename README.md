@@ -28,3 +28,5 @@ npm start
 ![Login](./img/argentbank2.webp)
 ![Account](./img/argentbank4.webp)
 ![redux](./img/argentbank5.webp)
+
+linux
